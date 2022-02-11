@@ -30,7 +30,7 @@ justify-content: center;
 }
 
 .long-quote{
-    font-size: 2rem;
+    font-size: 2rem; /*will be used in javascript to change styling of the long quotes*/
 }
 .fa-quote-left{
     font-size: 4rem;
