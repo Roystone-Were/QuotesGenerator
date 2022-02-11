@@ -17,27 +17,25 @@ function newQuote(){
        authorText.innerHTML = quote.author
    }
     //checking quote length to determine styling
-   if(quoteText.length > 50){
+   if(quoteText.length > 120){
        quoteText.classList.add("long-quote");
    }else{
     quoteText.classList.remove("long-quote");
 
    }
     quoteText.innerHTML = quote.text;
+
 }
+
+//to tweet the quote
+function tweetQuote(){
+    var twitterURL =`https://twitter.com/intent/tweet?text=${quoteText.innerHTML} - ${authorText.innerHTML}`; //this template string allows us to pass in a variable,and it will be converted into a string
+    window.open(twitterURL, "_blank") //allows twitter to open. "_blank" allows twitter window to open in a new tab
+}
+
+//event listeners
+newQuoteButton.addEventListener("click", newQuote);
+// twitterButton.addEventListener("click", tweetQuote); 👈 WRITTEN IN HTML INLINE, AS IT DOES NOT WORK PROPERLY HERE 
+
+//On load
 newQuote();
-
-
-
-// // get quotes from API
-// async function getQuotes(){ //can run independently & wont stop browser from completing loading the page
-//     var apiUrl ="https://type.fit/api/quotes";
-//     try {
-//       var response = await fetch(apiUrl);  
-//       apiQuotes = await response.json();
-//       newQuote();
-//     } catch (error) {
-//         //Catch error here
-//     }
-// }//on clicking load
-// getQuotes();
