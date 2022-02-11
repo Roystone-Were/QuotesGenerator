@@ -12,7 +12,7 @@ function newQuote(){
     var quote =localQuotes[Math.floor(Math.random()*(localQuotes.length))]
    //checking if author field is blank and if it is we set to "unknown"
    if(!quote.author){
-       authorText.innerHTML ="~Unknown~"
+       authorText.innerHTML ="~Unknown"
    }else {
        authorText.innerHTML = quote.author
    }
@@ -34,7 +34,7 @@ function tweetQuote(){
 }
 
 //event listeners
-newQuoteButton.addEventListener("click", newQuote);
+// newQuoteButton.addEventListener("click", newQuote);
 // twitterButton.addEventListener("click", tweetQuote); 👈 WRITTEN IN HTML INLINE, AS IT DOES NOT WORK PROPERLY HERE 
 
 //On load
