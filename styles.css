@@ -23,7 +23,7 @@ justify-content: center;
     padding: 20px 30px ; /*top and bottom is 20px, right and left is 30px*/
     border-radius:10px ; /*makes rounded corners*/
     background-color: rgba(255,255,255,0.4);
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2); /*0-horizontal offset, 10px-vertical offset, 10px-blur, 10px-radius, 0.2-opacity*/
+    box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.4); /*0-horizontal offset, 10px-vertical offset, 10px-blur, 10px-radius, 0.2-opacity*/
 }
 .quote-text{
     font-size: 2.75rem;
