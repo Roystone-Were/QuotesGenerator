@@ -1,13 +1,25 @@
-var quoteContainer = document.getElementById("quote-generator");
+var quoteContainer = document.getElementById("quote-container");
 var twitterButton = document.getElementById("twitter-button");
 var newQuoteButton = document.getElementById("new-quote");
 var quoteText = document.getElementById("quote");
 var authorText = document.getElementById("author");
+var loader = document.getElementById("loader");
 
-// var apiQuotes =[];
 
+// show loading 
+function loading(){
+    loader.hidden = false;
+    quoteContainer.hidden = true;
+}
+
+// hide loading
+function complete(){
+    quoteContainer.hidden = false;
+    loader.hidden = true;
+}
 //Show new quote
 function newQuote(){
+    loading();
     //picking random quote from array
     var quote =localQuotes[Math.floor(Math.random()*(localQuotes.length))]
    //checking if author field is blank and if it is we set to "unknown"
@@ -24,7 +36,7 @@ function newQuote(){
 
    }
     quoteText.innerHTML = quote.text;
-
+    complete();
 }
 
 //to tweet the quote
